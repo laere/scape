@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >## This Project Is Deprecated
 
 >React Hot Loader 3 is [on the horizon](https://github.com/gaearon/react-hot-loader/pull/240), and you can try it today ([boilerplate branch](https://github.com/gaearon/react-hot-boilerplate/pull/61), [upgrade example](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915)). It fixes some [long-standing issues](https://twitter.com/dan_abramov/status/722040946075045888) with both React Hot Loader and React Transform, and is intended as a replacement for both. The docs are not there yet, but they will be added before the final release. For now, [this commit](https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915) is a good reference.
@@ -129,3 +130,24 @@ You can discuss React Transform and related projects in **#react-transform** cha
 ## License
 
 CC0 (public domain)
+=======
+Runescape has been a big part of my life as a kid growing up.
+
+I started Runescape in 2001 during classic under the name Strikerx15. I was ranked 4 on top attack exp, 
+and in the top 20 for overall skills for almost half a year. I played it as much as I could until I left the game in 2007. 
+
+However, I couldn't stay away, and came back for a short time in 2009-2010 to do summoning, then again quit.
+
+Now it's 2016, and I have started playing again. Although I don't play OSRS, I have been enjoying RS3. Runescape is one game I hate starting over in.
+But, maybe I will start a new OSRS character sometime in the future.
+
+This project is being able to combine my love for creating web applications with my love for the game I grew up with. This application
+will be along the lines of a pokedex/wikipedia combination. Players can look up others high scores, monster information, and whats hot on the grand exchange within the game.
+
+I really want to make this project into something big, so here is for those that enjoy the game as much as I do!
+
+Cheers.
+
+
+
+>>>>>>> 0719f16b0e2e2faf5249a455032a4d9fb2282c49
