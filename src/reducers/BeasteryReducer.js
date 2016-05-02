@@ -1,7 +1,7 @@
-import * as actions from '../actions/BeasterActions';
+import * as actions from '../actions/BeasteryActions';
 
 
-export const beasteryData = (state, action) => {
+export const beasteryData = (state = [], action) => {
   switch(action.type) {
     case actions.REQUEST:
       return state;

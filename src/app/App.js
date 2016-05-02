@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-// import '../../scss/main.scss';
+import MainHeader from '../components/MainHeader';
+import '../../scss/main.scss';
 
 export default class App extends Component {
   render() {
     return (
-      <div>Hello</div>
+      <div>
+        <MainHeader />
+        {this.props.children}
+      </div>
     );
   }
 }
