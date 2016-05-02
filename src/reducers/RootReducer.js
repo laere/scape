@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import beasteryData from './BeasteryReducer';
 
 const rootReducer = combineReducers({
-  //state
+  beasteryData,
 })
 
 export default rootReducer;
