@@ -1,0 +1,26 @@
+.homePageNavBlocks-Wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  //background-color: red;
+
+  > .navBlock {
+      width: 300px;
+      margin: 0 80px;
+      border: 1px solid black;
+      font-size: 1.75rem;
+
+    > .text,
+    > .discover {
+        padding: 32px;
+    }
+
+    > .discover {
+        border-top: 1px solid black;
+    }
+
+  }
+
+}

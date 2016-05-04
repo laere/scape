@@ -6,9 +6,9 @@ const MainHeader = () => {
       <div className="headerLogo">Scape</div>
       <ul>
         <li className="headerNavLink">About</li>
-        <div className="navDot"></div>
+        {/*<div className="navDot"></div>*/}
         <li className="headerNavLink">Related Sites</li>
-        <div className="navDot"></div>
+        {/*<div className="navDot"></div>*/}
         <li className="headerNavLink">Twitch</li>
       </ul>
     </div>

@@ -1,10 +1,13 @@
 .mainHeader {
+  border-bottom: 1px solid $whitegrey;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   color: $darkblack;
   background-color: $white;
+  margin-bottom: 240px;
+
 
   .headerNavLink{
     display: inline-block;
@@ -23,12 +26,12 @@
     cursor: pointer;
   }
 
-  .navDot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 30px;
-    background-color: $darkblack;
-  }
+  // .navDot {
+  //   display: inline-block;
+  //   width: 6px;
+  //   height: 6px;
+  //   border-radius: 30px;
+  //   background-color: $darkblack;
+  // }
 
 }

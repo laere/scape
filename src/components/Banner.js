@@ -3,9 +3,10 @@ import React, { PropTypes } from 'react';
 const Banner = () => {
   return (
     <div className="homePageBanner">
-      <div className="homePageBanner-Title">SCAPE</div>
-      <div className="homePageBanner-Tagline">Tagline goes here</div>
+      <div className="title">SCAPE</div>
+      <div className="tagline">Tagline goes here</div>
     </div>
+
   );
 }
 
