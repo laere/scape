@@ -3,14 +3,14 @@ import React, { PropTypes } from 'react';
 const NavBlock = (props) => {
   return (
     <div className="navBlock">
-      <div className="image">
+      <div className="navBlock__image">
         <img src={props.img} alt="Runescape image"/>
       </div>
-      <div className="text">
+      <div className="navBlock__text">
         <div>{props.textTitle}</div>
         <div>{props.text}</div>
       </div>
-      <div className="discover">
+      <div className="navBlock__discover">
         {props.tagline}
       </div>
     </div>
