@@ -13,12 +13,22 @@
 
   .headerLogo {
     padding: 32px 64px;
+    background-color: $lightblack;
+    color: $white;
   }
 
   .headerLogo:hover,
   .headerNavLink:hover {
     background-color: pink;
     cursor: pointer;
+  }
+
+  .navDot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 30px;
+    background-color: $darkblack;
   }
 
 }

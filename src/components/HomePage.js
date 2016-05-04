@@ -1,8 +1,12 @@
 import React, { PropTypes } from 'react';
+import Banner from './Banner';
+import HomePageNavBlocks from './HomePageNavBlocks';
 
-const HomePage = (props) => {
+const HomePage = () => {
   return (
     <div>
+      <Banner/>
+      <HomePageNavBlocks/>
     </div>
   );
 }
