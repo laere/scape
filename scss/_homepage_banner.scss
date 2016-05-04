@@ -1,5 +1,4 @@
-.homePageBanner {
-  text-align: center;
+.banner {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -7,13 +6,13 @@
   position: relative;
   margin-bottom: 240px;
 
-    > .title {
+    > .banner__title {
         padding: 80px 256px;
         font-size: 6rem;
         border: 1px solid $lightblack;
     }
 
-    > .tagline {
+    > .banner__tagline {
         background-color: $lightgrey;
         color: $white;
         font-size: 2.5rem;
