@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  color: $darkblack;
   font-family: $mainfont;
   font-size: 2rem;
   line-height: 1.5;
@@ -20,14 +21,14 @@ img {
   max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .mainContent {

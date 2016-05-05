@@ -14,6 +14,9 @@ import HomePage from './components/HomePage';
 import Beastery from './containers/BeasteryContainer';
 import GE from './containers/GEContainer';
 import Hiscores from './containers/HiscoresContainer';
+import About from './components/About';
+import RelatedSites from './components/RelatedSites';
+import Twitch from './components/Twitch';
 //REDUCERS
 import rootReducer from './reducers/RootReducer';
 // Store with middleware.
@@ -29,6 +32,9 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
+        <Route path="about" component={About} />
+        <Route path="relatedsites" component={RelatedSites} />
+        <Route path="twitch" component={Twitch} />
         <Route path="beastery" component={Beastery} />
         <Route path="ge" component={GE} />
         <Route path="hiscores" component={Hiscores} />

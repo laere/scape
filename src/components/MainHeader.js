@@ -1,20 +1,26 @@
 import React, { PropTypes } from 'react';
-import { IndexLink } from 'react-router';
+import { Link } from 'react-router';
 
 const MainHeader = () => {
   return (
     <header>
       <div className="mainHeader">
-        <IndexLink to="/">
+        <Link to="/">
           <div className="headerLogo">Scape</div>
-        </IndexLink>
+        </Link>
         <nav role="navigation">
           <ul>
-            <li className="headerNavLink">About</li>
+            <Link to="about">
+              <li className="headerNavLink">About</li>
+            </Link>
             {/*<div className="navDot"></div>*/}
-            <li className="headerNavLink">Related Sites</li>
+            <Link to="relatedsites">
+              <li className="headerNavLink">Related Sites</li>
+            </Link>
             {/*<div className="navDot"></div>*/}
-            <li className="headerNavLink">Twitch</li>
+            <Link to="twitch">
+              <li className="headerNavLink">Twitch</li>
+            </Link>
           </ul>
         </nav>
       </div>
