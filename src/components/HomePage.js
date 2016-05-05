@@ -4,10 +4,12 @@ import HomePageNavBlocks from './HomePageNavBlocks';
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner/>
-      <HomePageNavBlocks />
-    </div>
+    <main role="main">
+      <div className="mainContent">
+        <Banner/>
+        <HomePageNavBlocks />
+      </div>
+    </main>
   );
 }
 

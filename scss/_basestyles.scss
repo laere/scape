@@ -30,5 +30,10 @@ ul {
   padding: 0;
 }
 
-.container {
+.mainContent {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
 }
