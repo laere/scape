@@ -27,6 +27,9 @@
       background-color: $lightgrey;
       color: $white;
       padding: 32px;
+      &:hover {
+        cursor: pointer;
+      }
     }
 
   }
