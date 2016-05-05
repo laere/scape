@@ -11,6 +11,9 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 // CONTAINERS
 import App from './app/App';
 import HomePage from './components/HomePage';
+import Beastery from './containers/BeasteryContainer';
+import GE from './containers/GEContainer';
+import Hiscores from './containers/HiscoresContainer';
 //REDUCERS
 import rootReducer from './reducers/RootReducer';
 // Store with middleware.
@@ -26,6 +29,9 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
+        <Route path="beastery" component={Beastery} />
+        <Route path="ge" component={GE} />
+        <Route path="hiscores" component={Hiscores} />
       </Route>
     </Router>
   </Provider>,

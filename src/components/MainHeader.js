@@ -1,10 +1,13 @@
 import React, { PropTypes } from 'react';
+import { IndexLink } from 'react-router';
 
 const MainHeader = () => {
   return (
     <header>
       <div className="mainHeader">
-        <div className="headerLogo">Scape</div>
+        <IndexLink to="/">
+          <div className="headerLogo">Scape</div>
+        </IndexLink>
         <nav role="navigation">
           <ul>
             <li className="headerNavLink">About</li>
