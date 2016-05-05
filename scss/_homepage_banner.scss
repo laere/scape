@@ -4,22 +4,22 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 240px;
+  margin-bottom: 265px;
 
-    > .banner__title {
-        padding: 80px 256px;
-        font-size: 6rem;
-        border: 1px solid $lightblack;
-    }
+  .banner__title {
+    padding: 80px 256px;
+    font-size: 6rem;
+    border: 1px solid $lightblack;
+  }
 
-    > .banner__tagline {
-        background-color: $lightgrey;
-        color: $white;
-        font-size: 2.5rem;
-        position: absolute;
-        left: 41%;
-        bottom: -50px;
-        padding: 32px 80px;
-    }
+  .banner__tagline {
+    background-color: $lightgrey;
+    color: $white;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 41%;
+    bottom: -50px;
+    padding: 32px 80px;
+  }
 
 }

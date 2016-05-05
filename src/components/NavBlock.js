@@ -7,7 +7,7 @@ const NavBlock = (props) => {
         <img src={props.img} alt="Runescape image"/>
       </div>
       <div className="navBlock__text">
-        <div>{props.textTitle}</div>
+        <div className="navBlock__text--textTitle">{props.textTitle}</div>
         <div>{props.text}</div>
       </div>
       <div className="navBlock__discover">
