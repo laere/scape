@@ -14,9 +14,10 @@ import HomePage from './components/HomePage';
 import Beastery from './containers/BeasteryContainer';
 import GE from './containers/GEContainer';
 import Hiscores from './containers/HiscoresContainer';
+import Twitch from './containers/TwitchContainer';
+//COMPONENTS
 import About from './components/About';
 import RelatedSites from './components/RelatedSites';
-import Twitch from './components/Twitch';
 //REDUCERS
 import rootReducer from './reducers/RootReducer';
 // Store with middleware.

@@ -6,7 +6,7 @@ const MainHeader = () => {
     <header>
       <div className="mainHeader">
         <Link to="/">
-          <div className="headerLogo">Scape</div>
+          <div className="headerLogo">scape</div>
         </Link>
         <nav role="navigation">
           <ul>

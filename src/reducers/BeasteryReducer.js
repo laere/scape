@@ -1,7 +1,12 @@
 import * as actions from '../actions/BeasteryActions';
 
+const initialState = {
+  data: null,
+  isFetching: false,
+  receivedAt: null
+}
 
-export const beasteryData = (state = [], action) => {
+export const beasteryData = (state = initialState, action) => {
   switch(action.type) {
     case actions.REQUEST:
       return state;
@@ -13,5 +18,3 @@ export const beasteryData = (state = [], action) => {
       return state;
   }
 }
-
-//Combine all reducers in here, and put that into a root combine function
