@@ -1,0 +1,11 @@
+.streamsList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  .streamsList__item {
+    padding: 24px;
+  }
+
+}
