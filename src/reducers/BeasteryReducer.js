@@ -35,9 +35,9 @@ export const beasteryData = (state = initialState , action) => {
 export const beasteryInput = (state = '', action) => {
   switch(action.type) {
     case SET_INPUT:
-      return action.text
+      return action.text;
     case CLEAR_INPUT:
-      return action.payload
+      return action.payload;
     default:
       return state;
   }

@@ -6,7 +6,7 @@ import Beastery from '../components/Beastery';
 
 class BeasteryContainer extends React.Component {
   static propTypes = {
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     getInput: PropTypes.func.isRequired,
     clearInput: PropTypes.func.isRequired,
     getBeasteryData: PropTypes.func.isRequired
@@ -27,20 +27,23 @@ class BeasteryContainer extends React.Component {
 
   handleOnClick(e) {
     e.preventDefault();
-    this.props.clearInput();
+    const { clearInput } = this.props;
+    clearInput();
   }
 
   handleOnChange(e) {
     e.preventDefault();
-    this.props.getInput(text);
+    const { getInput } = this.props;
+    getInput(e.target.value);
   }
 
   render() {
+    const { text } = this.props;
     return (
       <Beastery
         text={text}
         onSubmit={this.handleOnSubmit}
-        onClick={this.handleOnSubmit}
+        onClick={this.handleOnClick}
         onChange={this.handleOnChange} />
     );
   }
