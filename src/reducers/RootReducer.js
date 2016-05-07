@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { twitchData } from './TwitchReducer';
-import { beasteryData } from './BeasteryReducer';
+import { streamsData } from './StreamsReducer';
+import { beastery } from './BeasteryReducer';
 
 const rootReducer = combineReducers({
-  twitchData,
-  beasteryData,
+  streamsData,
+  beastery,
 });
 
 export default rootReducer;

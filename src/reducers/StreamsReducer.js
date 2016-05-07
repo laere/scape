@@ -6,7 +6,7 @@ const initialState = {
   receivedAt: null
 }
 
-export const twitchData = (state = initialState , action) => {
+export const streamsData = (state = initialState , action) => {
   switch(action.type) {
     case actions.REQUEST:
       return {

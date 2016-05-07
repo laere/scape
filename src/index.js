@@ -14,7 +14,7 @@ import HomePage from './components/HomePage';
 import Beastery from './containers/BeasteryContainer';
 import GE from './containers/GEContainer';
 import Hiscores from './containers/HiscoresContainer';
-import Twitch from './containers/TwitchContainer';
+import Streams from './containers/StreamsContainer';
 //COMPONENTS
 import About from './components/About';
 import RelatedSites from './components/RelatedSites';
@@ -35,7 +35,7 @@ ReactDOM.render(
         <IndexRoute component={HomePage} />
         <Route path="about" component={About} />
         <Route path="relatedsites" component={RelatedSites} />
-        <Route path="twitch" component={Twitch} />
+        <Route path="streams" component={Streams} />
         <Route path="beastery" component={Beastery} />
         <Route path="ge" component={GE} />
         <Route path="hiscores" component={Hiscores} />

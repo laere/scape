@@ -5,7 +5,7 @@ export default class About extends Component {
     return (
       <div className="aboutPage">
         <h1>Welcome to Scape!</h1>
-        <p>Scape is a web application that allows users to look up monsters, personal hiscores, grand exchange information and more!</p>
+        <p>Scape is a web application using the Runescape API that allows users to look up monsters, personal hiscores, grand exchange information and more!</p>
 
         <p>I created this site, because I absolutely have enjoyed 15 years (with some breaks) of Runescape</p>
 
@@ -23,7 +23,7 @@ export default class About extends Component {
           All in all I still enjoy Runescape, and it's still my first MMO ever, so I do have a bit of bias.
         </p>
 
-        <p>I hope you guys enjoy this site, as I would like to make it into something big!</p>
+        <p>I hope you guys enjoy this site!</p>
 
         <p>- Zack</p>
       </div>

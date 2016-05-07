@@ -1,32 +1,32 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/DataFetching';
-import Twitch from '../components/Twitch';
+import Streams from '../components/Streams';
 
-class TwitchContainer extends React.Component {
+class StreamsContainer extends React.Component {
   static propTypes = {
-    twitchData: PropTypes.object,
+    streamsData: PropTypes.object,
     fetchStreams: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    const { fetchStreams, twitchData } = this.props;
-    if (!twitchData.data) {
+    const { fetchStreams, streamsData } = this.props;
+    if (!streamsData.data) {
       fetchStreams('https://api.twitch.tv/kraken/streams?game=runescape&limit=100');
     }
   }
 
   render() {
-    const { twitchData } = this.props;
-    return twitchData.isFetching ?
+    const { streamsData } = this.props;
+    return streamsData.isFetching ?
       <h1 style={{textAlign: 'center', fontSize: '6rem'}}>Loading data...</h1> :
-      <Twitch streams={twitchData.data.streams}/>;
+      <Streams streams={streamsData.data.streams}/>;
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    twitchData: state.twitchData
+    streamsData: state.streamsData
   }
 }
 
@@ -36,4 +36,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TwitchContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(StreamsContainer);

@@ -18,8 +18,8 @@ const MainHeader = () => {
               <li className="headerNavLink">Related Sites</li>
             </Link>
             {/*<div className="navDot"></div>*/}
-            <Link to="twitch">
-              <li className="headerNavLink">Twitch</li>
+            <Link to="streams">
+              <li className="headerNavLink">Streams</li>
             </Link>
           </ul>
         </nav>

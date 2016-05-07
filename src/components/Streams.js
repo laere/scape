@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-const Twitch = ({ streams }) => {
+const Streams = ({ streams }) => {
     return (
       <div className="streamsList">
         {streams.map(stream => {
@@ -23,4 +23,4 @@ const Twitch = ({ streams }) => {
   );
 }
 
-export default Twitch;
+export default Streams;
