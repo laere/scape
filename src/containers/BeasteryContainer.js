@@ -22,7 +22,7 @@ class BeasteryContainer extends React.Component {
   handleOnSubmit(e) {
     e.preventDefault();
     const { getBeasteryData, text } = this.props;
-    //getBeasteryData(url + text);
+    getBeasteryData(`http://services.runescape.com/m=itemdb_rs/bestiary/beastSearch.json?term=${text}`);
   }
 
   handleOnClick(e) {

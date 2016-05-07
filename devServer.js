@@ -2,9 +2,14 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.dev');
+var cors = require('cors');
+var bodyParser = require('body-parser');
 
 var app = express();
 var compiler = webpack(config);
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(cors());
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
