@@ -14,3 +14,12 @@ will be along the lines of a pokedex/wikipedia combination. Players can look up 
 I really want to make this project into something big, so here is for those that enjoy the game as much as I do!
 
 Cheers.
+
+
+<h1>Things to do</h1>
+
+Need to make some utility functions to reduce repeated code.
+
+Need to create more pure, functional components to stop repeated components.
+
+Need to proxy my requests since to avoid origin header errors (using cors extension for now).
