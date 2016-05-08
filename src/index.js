@@ -12,7 +12,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './app/App';
 import HomePage from './components/HomePage';
 import Beastery from './containers/BeasteryContainer';
-import GE from './containers/GEContainer';
+import GrandExchange from './containers/GrandExchangeContainer';
 import Hiscores from './containers/HiscoresContainer';
 import Streams from './containers/StreamsContainer';
 //COMPONENTS
@@ -37,7 +37,7 @@ ReactDOM.render(
         <Route path="relatedsites" component={RelatedSites} />
         <Route path="streams" component={Streams} />
         <Route path="beastery" component={Beastery} />
-        <Route path="ge" component={GE} />
+        <Route path="grandexchange" component={GrandExchange} />
         <Route path="hiscores" component={Hiscores} />
       </Route>
     </Router>

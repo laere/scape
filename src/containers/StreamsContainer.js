@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchStreamsData } from '../actions/StreamsActions';
 import { STREAMS_URL } from '../endpoints/endpoints';
 import Streams from '../components/Streams';
+import Loading from '../components/Loading';
 
 class StreamsContainer extends React.Component {
   static propTypes = {
@@ -11,23 +12,23 @@ class StreamsContainer extends React.Component {
   };
 
   componentDidMount() {
-    const { fetchStreams, streamsData } = this.props;
-    if (!streamsData.data) {
+    const { fetchStreams, streams } = this.props;
+    if (!streams.data) {
       fetchStreams(STREAMS_URL);
     }
   }
 
   render() {
-    const { streamsData } = this.props;
-    return streamsData.isFetching ?
-      <h1 style={{textAlign: 'center', fontSize: '6rem'}}>Loading data...</h1> :
-      <Streams streams={streamsData.data.streams}/>;
+    const { streams } = this.props;
+    return streams.isFetching ?
+      <Loading name="Loading data..."/> :
+      <Streams streams={streams.data.streams}/>;
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    streamsData: state.streamsData
+    streams: state.streams
   }
 }
 

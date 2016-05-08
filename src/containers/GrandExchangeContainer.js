@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'redux';
-import GE from '../components/GE';
+import GrandExchange from '../components/GrandExchange';
 
-class GEContainer extends React.Component {
+class GrandExchangeContainer extends React.Component {
   static propTypes = {
 
   };
@@ -14,9 +14,9 @@ class GEContainer extends React.Component {
 
   render() {
     return (
-      <GE />
+      <GrandExchange />
     );
   }
 }
 
-export default GEContainer;
+export default GrandExchangeContainer;

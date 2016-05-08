@@ -19,4 +19,16 @@ class HiscoresContainer extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
 export default HiscoresContainer;

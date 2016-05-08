@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-const Hiscores = () => {
+const GrandExchange = () => {
   return (
     <div>
       <form>
@@ -13,10 +13,10 @@ const Hiscores = () => {
         </div>
       </form>
       <div>
-        {/*Hiscores DATA TO GO HERE*/}
+        {/*BEAST DATA TO GO HERE*/}
       </div>
     </div>
   );
 }
 
-export default Hiscores;
+export default GrandExchange;

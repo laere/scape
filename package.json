@@ -46,6 +46,7 @@
     "axios": "^0.11.0",
     "body-parser": "^1.15.1",
     "cors": "^2.7.1",
+    "express-http-proxy": "^0.6.0",
     "lodash": "^4.11.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -53,6 +54,7 @@
     "react-router": "^2.4.0",
     "redux": "^3.5.2",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.0.1",
+    "request": "^2.72.0"
   }
 }
