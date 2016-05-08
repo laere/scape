@@ -1,4 +1,4 @@
-import * as actions from '../actions/StreamsActions';
+import * as actions from '../actions/GEActions';
 
 const initialState = {
   data: null,
@@ -6,21 +6,21 @@ const initialState = {
   receivedAt: null
 }
 
-export const streamsData = (state = initialState , action) => {
+export const geData = (state = initialState , action) => {
   switch(action.type) {
-    case actions.STREAMS_REQUEST:
+    case actions.GE_REQUEST:
       return {
         ...state,
         isFetching: true
       }
-    case actions.STREAMS_SUCCESS:
+    case actions.GE_SUCCESS:
       return {
         ...state,
         data: action.data,
         isFetching: false,
         receivedAt: new Date().toLocaleString()
       }
-    case actions.STREAMS_FAILURE:
+    case actions.GE_FAILURE:
       return {
         ...state,
         isFetching: false

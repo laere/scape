@@ -1,28 +1,28 @@
-import * as actions from '../actions/DataFetching';
-import { SET_INPUT, CLEAR_INPUT } from '../actions/BeasteryActions';
+import * as actions from '../actions/BeasteryActions';
 import { combineReducers } from 'redux';
 
 const initialState = {
   data: null,
   isFetching: false,
-  receivedAt: null
+  receivedAt: null,
+  currentBeastId: null
 }
 
 export const beasteryData = (state = initialState , action) => {
   switch(action.type) {
-    case actions.REQUEST:
+    case actions.BEASTERY_REQUEST:
       return {
         ...state,
         isFetching: true
       }
-    case actions.SUCCESS:
+    case actions.BEASTERY_SUCCESS:
       return {
         ...state,
         data: action.data,
         isFetching: false,
         receivedAt: new Date().toLocaleString()
       }
-    case actions.FAILURE:
+    case actions.BEASTERY_FAILURE:
       return {
         ...state,
         isFetching: false
@@ -34,9 +34,9 @@ export const beasteryData = (state = initialState , action) => {
 
 export const beasteryInput = (state = '', action) => {
   switch(action.type) {
-    case SET_INPUT:
+    case actions.SET_INPUT:
       return action.text;
-    case CLEAR_INPUT:
+    case actions.CLEAR_INPUT:
       return action.payload;
     default:
       return state;

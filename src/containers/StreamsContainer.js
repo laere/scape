@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchData } from '../actions/DataFetching';
+import { fetchStreamsData } from '../actions/StreamsActions';
+import { STREAMS_URL } from '../endpoints/endpoints';
 import Streams from '../components/Streams';
 
 class StreamsContainer extends React.Component {
@@ -12,7 +13,7 @@ class StreamsContainer extends React.Component {
   componentDidMount() {
     const { fetchStreams, streamsData } = this.props;
     if (!streamsData.data) {
-      fetchStreams('https://api.twitch.tv/kraken/streams?game=runescape&limit=100');
+      fetchStreams(STREAMS_URL);
     }
   }
 
@@ -32,7 +33,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchStreams: (url) => dispatch(fetchData(url))
+    fetchStreams: (url) => dispatch(fetchStreamsData(url))
   }
 }
 

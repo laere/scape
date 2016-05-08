@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { setInput, clearInput } from '../actions/BeasteryActions';
-import { fetchData } from '../actions/DataFetching';
+import { setInput, clearInput, fetchBeasteryData } from '../actions/BeasteryActions';
+import { BEASTERY_URL } from '../endpoints/endpoints';
 import Beastery from '../components/Beastery';
 
 class BeasteryContainer extends React.Component {
@@ -22,7 +22,7 @@ class BeasteryContainer extends React.Component {
   handleOnSubmit(e) {
     e.preventDefault();
     const { getBeasteryData, text } = this.props;
-    getBeasteryData(`http://services.runescape.com/m=itemdb_rs/bestiary/beastSearch.json?term=${text}`);
+    getBeasteryData(BEASTERY_URL + text);
   }
 
   handleOnClick(e) {
@@ -59,7 +59,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getInput: (text) => dispatch(setInput(text)),
     clearInput: () => dispatch(clearInput()),
-    getBeasteryData: (url) => dispatch(fetchData(url))
+    getBeasteryData: (url) => dispatch(fetchBeasteryData(url))
   }
 }
 

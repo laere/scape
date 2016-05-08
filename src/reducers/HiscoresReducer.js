@@ -1,4 +1,4 @@
-import * as actions from '../actions/StreamsActions';
+import * as actions from '../actions/HiscoresActions';
 
 const initialState = {
   data: null,
@@ -6,21 +6,21 @@ const initialState = {
   receivedAt: null
 }
 
-export const streamsData = (state = initialState , action) => {
+export const hiscoresData = (state = initialState , action) => {
   switch(action.type) {
-    case actions.STREAMS_REQUEST:
+    case actions.HISCORES_REQUEST:
       return {
         ...state,
         isFetching: true
       }
-    case actions.STREAMS_SUCCESS:
+    case actions.HISCORES_SUCCESS:
       return {
         ...state,
         data: action.data,
         isFetching: false,
         receivedAt: new Date().toLocaleString()
       }
-    case actions.STREAMS_FAILURE:
+    case actions.HISCORES_FAILURE:
       return {
         ...state,
         isFetching: false
