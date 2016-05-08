@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'redux';
-import Beastery from '../components/GE';
+import GE from '../components/GE';
 
 class GEContainer extends React.Component {
   static propTypes = {
@@ -14,7 +14,7 @@ class GEContainer extends React.Component {
 
   render() {
     return (
-      <div></div>
+      <GE />
     );
   }
 }

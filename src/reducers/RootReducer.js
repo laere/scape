@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
-import { streamsData } from './StreamsReducer';
+import { streams } from './StreamsReducer';
 import { beastery } from './BeasteryReducer';
-import { geData } from './GEReducer';
-import { hiscoresData } from './HiscoresReducer';
+import { grandExchange } from './GEReducer';
+import { hiscores } from './HiscoresReducer';
 
 const rootReducer = combineReducers({
-  streamsData,
+  streams,
   beastery,
-  geData,
-  hiscoresData,
+  grandExchange,
+  hiscores,
 });
 
 export default rootReducer;

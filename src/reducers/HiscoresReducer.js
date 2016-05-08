@@ -6,7 +6,7 @@ const initialState = {
   receivedAt: null
 }
 
-export const hiscoresData = (state = initialState , action) => {
+export const hiscores = (state = initialState , action) => {
   switch(action.type) {
     case actions.HISCORES_REQUEST:
       return {

@@ -8,7 +8,7 @@ const initialState = {
   currentBeastId: null
 }
 
-export const beasteryData = (state = initialState , action) => {
+export const beast = (state = initialState , action) => {
   switch(action.type) {
     case actions.BEASTERY_REQUEST:
       return {
@@ -32,7 +32,7 @@ export const beasteryData = (state = initialState , action) => {
   }
 }
 
-export const beasteryInput = (state = '', action) => {
+export const input = (state = '', action) => {
   switch(action.type) {
     case actions.SET_INPUT:
       return action.text;
@@ -44,6 +44,6 @@ export const beasteryInput = (state = '', action) => {
 }
 
 export const beastery = combineReducers({
-  beasteryData,
-  beasteryInput
+  beast,
+  input,
 })

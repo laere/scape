@@ -6,7 +6,7 @@ const initialState = {
   receivedAt: null
 }
 
-export const geData = (state = initialState , action) => {
+export const grandExchange = (state = initialState , action) => {
   switch(action.type) {
     case actions.GE_REQUEST:
       return {

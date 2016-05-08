@@ -6,7 +6,7 @@ const initialState = {
   receivedAt: null
 }
 
-export const streamsData = (state = initialState , action) => {
+export const streams = (state = initialState , action) => {
   switch(action.type) {
     case actions.STREAMS_REQUEST:
       return {
