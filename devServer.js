@@ -6,12 +6,9 @@ var request = require('request');
 
 var app = express();
 var compiler = webpack(config);
-var apiServerHost = 'http://services.runescape.com/m=rswiki/en/Bestiary_APIs#Beast_Data';
 
-app.use('/', function(req, res) {
-  var url = apiServerHost + req.url;
-  req.pipe(request(url)).pipe(res);
-});
+
+app.post('/', (req, res) => res.json(req.body));
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -25,6 +22,8 @@ app.use('/public', express.static('public'));
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+
 
 app.listen(3000, function(err) {
   if (err) {
