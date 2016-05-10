@@ -8,7 +8,6 @@ var app = express();
 var compiler = webpack(config);
 
 
-app.post('/', (req, res) => res.json(req.body));
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -22,8 +21,6 @@ app.use('/public', express.static('public'));
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-
-
 
 app.listen(3000, function(err) {
   if (err) {
