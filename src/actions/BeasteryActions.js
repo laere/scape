@@ -26,19 +26,19 @@ const request = () => {
   }
 }
 
-const postData = (type, data) => {
+const receive = (type, data) => {
   return {
     type,
     data
   }
 }
 
-export const postBeasteryData = (url) => {
+export const fetchBeasteryData = (text) => {
   return (dispatch) => {
     dispatch(request());
-
-    return axios.post(url)
-      .then(res => dispatch(postData(BEASTERY_SUCCESS, res.data)))
-      .catch(res => dispatch(postData(BEASTERY_FAILURE)))
+    console.log(text);
+    return axios.get('/beastery/' + text)
+      .then(res => dispatch(receive(BEASTERY_SUCCESS, res.data)))
+      .catch(res => dispatch(receive(BEASTERY_FAILURE)))
   }
 }

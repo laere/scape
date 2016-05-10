@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { setInput, clearInput, fetchBeasteryData } from '../actions/BeasteryActions';
 import { BEASTERY_URL } from '../endpoints/endpoints';
 import Beastery from '../components/Beastery';
+import Loading from '../components/Loading';
 
 class BeasteryContainer extends React.Component {
   static propTypes = {
@@ -22,7 +23,7 @@ class BeasteryContainer extends React.Component {
   handleOnSubmit(e) {
     e.preventDefault();
     const { getBeasteryData, text } = this.props;
-    getBeasteryData('http://localhost:3000');
+    getBeasteryData(text);
   }
 
   handleOnClick(e) {
@@ -38,10 +39,11 @@ class BeasteryContainer extends React.Component {
   }
 
   render() {
-    const { text } = this.props;
+    const { text, beasts } = this.props;
     return (
       <Beastery
         text={text}
+        beasts={beasts.data}
         onSubmit={this.handleOnSubmit}
         onClick={this.handleOnClick}
         onChange={this.handleOnChange} />
@@ -51,7 +53,8 @@ class BeasteryContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    text: state.beastery.input
+    text: state.beastery.input,
+    beasts: state.beastery.beast
   }
 }
 

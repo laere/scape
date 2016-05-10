@@ -1,19 +1,20 @@
 import React, { Component, PropTypes } from 'react';
+import SearchBar from '../components/SearchBar';
 
-const Beastery = ({text, onChange, onClick, onSubmit}) => {
+const Beastery = ({text, beasts, onSubmit, onClick, onChange}) => {
   return (
     <div>
-      <form onSubmit={onSubmit}>
-        <div>
-          <input type="text" value={text} onChange={onChange}/>
-        </div>
-        <div>
-          <button>Search</button>
-          <button onClick={onClick}>Clear</button>
-        </div>
-      </form>
+    <SearchBar onClick={onClick}
+               onSubmit={onSubmit}
+               onChange={onSubmit}/>
       <div>
-        {/*BEAST DATA TO GO HERE*/}
+        {beasts.map(beast => {
+          return (
+            <div key={beast.value}>
+              {beast.label}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
