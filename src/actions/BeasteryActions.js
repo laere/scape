@@ -3,20 +3,12 @@ import axios from 'axios';
 export const BEASTERY_REQUEST = 'BEASTERY_REQUEST';
 export const BEASTERY_SUCCESS = 'BEASTERY_SUCCESS';
 export const BEASTERY_FAILURE = 'BEASTERY_FAILURE';
-export const SET_INPUT = 'SET_INPUT';
-export const CLEAR_INPUT  = 'CLEAR_INPUT';
+export const BEASTERY_INPUT = 'BEASTERY_INPUT';
 
 export const setInput = (text) => {
   return {
-    type: SET_INPUT,
+    type: BEASTERY_INPUT,
     text
-  }
-}
-
-export const clearInput = () => {
-  return {
-    type: CLEAR_INPUT,
-    payload: ''
   }
 }
 

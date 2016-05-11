@@ -1,7 +1,8 @@
 import * as actions from '../actions/HiscoresActions';
+import { combineReducers } from 'react-redux';
 
 const initialState = {
-  data: null,
+  data: [],
   isFetching: false,
   receivedAt: null
 }
@@ -16,7 +17,7 @@ export const hiscores = (state = initialState , action) => {
     case actions.HISCORES_SUCCESS:
       return {
         ...state,
-        data: action.data,
+        data: state.data.concat(action.data),
         isFetching: false,
         receivedAt: new Date().toLocaleString()
       }
@@ -29,3 +30,19 @@ export const hiscores = (state = initialState , action) => {
       return state;
   }
 }
+
+export const input = (state = '', action) => {
+  switch(action.type) {
+    case actions.HISCORES_INPUT:
+      return action.text;
+    default:
+      return state;
+  }
+}
+
+const scores = combineReducers({
+  hiscores,
+  input
+})
+
+export default scores;

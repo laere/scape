@@ -1,17 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 
-const Hiscores = () => {
+const Hiscores = ({text, hiscores, onSubmit, onChange}) => {
   return (
     <div>
-      <form>
-        <div>
-          <input type="text"/>
-        </div>
-        <div>
-          <button>Search</button>
-          <button>Clear</button>
-        </div>
-      </form>
+      <div>
+        <form onSubmit={onSubmit}>
+          <div>
+            <input type="text" value={text} onChange={onChange}/>
+          </div>
+          <div>
+            <button>Search</button>
+            <button onClick={onClick}>Clear</button>
+          </div>
+        </form>
+      </div>
       <div>
         {/*Hiscores DATA TO GO HERE*/}
       </div>

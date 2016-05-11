@@ -3,17 +3,14 @@ var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.dev');
 var request = require('request');
-var morgan = require('morgan');
 
-var beastApi = 'http://services.runescape.com/m=itemdb_rs/bestiary/beastSearch.json?term=';
-var beastApiId = 'http://services.runescape.com/m=itemdb_rs/bestiary/beastData.json?beastid=';
-var hiscoresApi;
-var grandexchangeApi;
+var beastApi = 'http://services.runescape.com/m=itemdb_rs/bestiary/beastSearch.json?term=',
+    beastApiId = 'http://services.runescape.com/m=itemdb_rs/bestiary/beastData.json?beastid=',
+    hiscoresApi = 'http://services.runescape.com/m=hiscore/index_lite.ws?player=',
+    grandexchangeApi = 'http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=';
 
 var app = express();
 var compiler = webpack(config);
-
-// app.use(morgan('combined'));
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -26,11 +23,26 @@ app.use('/public', express.static('public'));
 
 app.get('/beastery/:text/', (req, res) => {
   request(beastApi + req.params.text, (err, response, body) => {
-    console.log(response.statusCode);
+    console.log(res.statusCode)
     console.log(body);
     res.send(body);
   });
 })
+
+app.get('/hiscores/:user', (req, res) => {
+  request(hiscoresApi + req.params.user, (err, response, body ) => {
+    console.log(response.statusCode, body);
+    res.send(body);
+  })
+})
+
+// app.get('/grandexchange/:item', (req, res) => {
+//   request(grandexchangeApi + req.params.item, (err, response, body) => {
+//     console.log(res.statusCode, body);
+//     res.send(body);
+//   })
+// })
+
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
