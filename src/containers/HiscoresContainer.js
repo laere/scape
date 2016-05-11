@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'redux';
+import { connect } from 'react-redux';
 import { setInput, fetchHiscoresData } from '../actions/HiscoresActions';
 import Hiscores from '../components/Hiscores';
 
@@ -43,7 +43,7 @@ class HiscoresContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     text: state.scores.input,
-    hiscores: state.hiscores.data
+    hiscores: state.scores.hiscores.data
   }
 }
 

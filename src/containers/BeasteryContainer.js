@@ -50,7 +50,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getInput: (text) => dispatch(setInput(text)),
-    getBeasteryData: (url) => dispatch(fetchBeasteryData(url))
+    getBeasteryData: (text) => dispatch(fetchBeasteryData(text))
   }
 }
 

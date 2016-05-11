@@ -21,19 +21,18 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use('/public', express.static('public'));
 
-app.get('/beastery/:text/', (req, res) => {
+app.get('/beastery/:text', (req, res) => {
   request(beastApi + req.params.text, (err, response, body) => {
-    console.log(res.statusCode)
-    console.log(body);
+    console.log(body)
     res.send(body);
   });
 })
 
-app.get('/hiscores/:user', (req, res) => {
-  request(hiscoresApi + req.params.user, (err, response, body ) => {
-    console.log(response.statusCode, body);
+app.get('/hiscores/:text', (req, res) => {
+  request(hiscoresApi + req.params.text, (err, response, body ) => {
+    console.log(body);
     res.send(body);
-  })
+  });
 })
 
 // app.get('/grandexchange/:item', (req, res) => {

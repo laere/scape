@@ -1,5 +1,5 @@
 import * as actions from '../actions/HiscoresActions';
-import { combineReducers } from 'react-redux';
+import { combineReducers } from 'redux';
 
 const initialState = {
   data: [],
@@ -40,9 +40,7 @@ export const input = (state = '', action) => {
   }
 }
 
-const scores = combineReducers({
+export const scores = combineReducers({
   hiscores,
   input
 })
-
-export default scores;
