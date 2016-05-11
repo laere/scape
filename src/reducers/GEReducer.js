@@ -1,12 +1,12 @@
 import * as actions from '../actions/GEActions';
 
 const initialState = {
-  data: null,
+  data: [],
   isFetching: false,
   receivedAt: null
 }
 
-export const grandExchange = (state = initialState , action) => {
+export const items = (state = initialState , action) => {
   switch(action.type) {
     case actions.GE_REQUEST:
       return {
@@ -29,3 +29,17 @@ export const grandExchange = (state = initialState , action) => {
       return state;
   }
 }
+
+export const input = (state = '', action) => {
+  switch(action.type) {
+    case actions.HISCORES_INPUT:
+      return action.text;
+    default:
+      return state;
+  }
+}
+
+export const grandExchange = combineReducers({
+  items,
+  input
+});

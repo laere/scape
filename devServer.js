@@ -28,11 +28,11 @@ app.get('/beastery/:text', (req, res) => {
   });
 })
 
+var Converter = require('csvtojson').Converter;
+var converter = new Converter({constructResult: false});
+
 app.get('/hiscores/:text', (req, res) => {
-  request(hiscoresApi + req.params.text, (err, response, body ) => {
-    console.log(body);
-    res.send(body);
-  });
+
 })
 
 // app.get('/grandexchange/:item', (req, res) => {
