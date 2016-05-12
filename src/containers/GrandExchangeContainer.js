@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'redux';
+import { connect } from 'react-redux';
 import { setInput, fetchGrandExchangeData } from '../actions/GEActions';
 import GrandExchange from '../components/GrandExchange';
 

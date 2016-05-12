@@ -29,7 +29,7 @@ export const fetchGrandExchangeData = (text) => {
   return (dispatch) => {
     dispatch(request());
     console.log(text);
-    return axios.get(text)
+    return axios.get('/grandexchange/' + text)
       .then(res => dispatch(receive(GE_SUCCESS, res.data)))
       .catch(res => dispatch(receive(GE_FAILURE)))
   }

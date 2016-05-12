@@ -1,4 +1,5 @@
 import * as actions from '../actions/GEActions';
+import { combineReducers } from 'redux';
 
 const initialState = {
   data: [],
@@ -16,7 +17,7 @@ export const items = (state = initialState , action) => {
     case actions.GE_SUCCESS:
       return {
         ...state,
-        data: action.data,
+        data: state.data.concat(action.data),
         isFetching: false,
         receivedAt: new Date().toLocaleString()
       }
@@ -32,7 +33,7 @@ export const items = (state = initialState , action) => {
 
 export const input = (state = '', action) => {
   switch(action.type) {
-    case actions.HISCORES_INPUT:
+    case actions.GE_INPUT:
       return action.text;
     default:
       return state;

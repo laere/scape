@@ -28,20 +28,19 @@ app.get('/beastery/:text', (req, res) => {
   });
 })
 
+app.get('/grandexchange/:text', (req, res) => {
+  request(grandexchangeApi + req.params.text, (err, response, body) => {
+    console.log(body);
+    res.send(body);
+  });
+})
+
 var Converter = require('csvtojson').Converter;
 var converter = new Converter({constructResult: false});
 
 app.get('/hiscores/:text', (req, res) => {
 
 })
-
-// app.get('/grandexchange/:item', (req, res) => {
-//   request(grandexchangeApi + req.params.item, (err, response, body) => {
-//     console.log(res.statusCode, body);
-//     res.send(body);
-//   })
-// })
-
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));

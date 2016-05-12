@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Loading from './Loading';
 
-const Beastery = ({text, beasts, onSubmit, onClick, onChange}) => {
+const Beastery = ({text, beasts, onSubmit, onChange}) => {
   return (
     <div>
       <div>
@@ -11,7 +11,6 @@ const Beastery = ({text, beasts, onSubmit, onClick, onChange}) => {
           </div>
           <div>
             <button>Search</button>
-            <button onClick={onClick}>Clear</button>
           </div>
         </form>
       </div>
