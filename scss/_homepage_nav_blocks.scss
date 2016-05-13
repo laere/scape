@@ -6,12 +6,17 @@
   margin-bottom: 80px;
 
   .navBlock {
-    width: 308px;
+    width: 350px;
     margin: 0 80px;
     border: 1px solid black;
     font-size: 1.75rem;
     &:hover {
       cursor: pointer;
+    }
+
+    .navBlock__image {
+      width: 100%;
+      height: 250px;
     }
 
     .navBlock__text {

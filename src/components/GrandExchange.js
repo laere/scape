@@ -26,6 +26,7 @@ const GrandExchange = ({text, geData, onSubmit, onChange}) => {
               <div>Today: Down <em>{x.item.today.price}</em> gold.</div>
               <div>30 day change: <em>{x.item.day30.change}</em></div>
               <div>90 day change: <em>{x.item.day90.change}</em></div>
+              <button>Graph data</button>
             </div>
           );
         })}

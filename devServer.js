@@ -21,6 +21,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use('/public', express.static('public'));
 
+//Api call to beastery data
 app.get('/beastery/:text', (req, res) => {
   request(beastApi + req.params.text, (err, response, body) => {
     console.log(body)
@@ -28,6 +29,14 @@ app.get('/beastery/:text', (req, res) => {
   });
 })
 
+app.get('/beastery/:id', (req, res) => {
+  request(beastApiId + req.params.id, (err, response, body) => {
+    console.log(body);
+    res.send(body);
+  })
+})
+
+//Api call to grand exchange data
 app.get('/grandexchange/:text', (req, res) => {
   request(grandexchangeApi + req.params.text, (err, response, body) => {
     console.log(body);
@@ -35,6 +44,15 @@ app.get('/grandexchange/:text', (req, res) => {
   });
 })
 
+app.get('/grandexchange/:text', (req, res) => {
+  request(`http://services.runescape.com/m=itemdb_rs/api/graph/${req.params.text}.json`, (err, response, body) => {
+    console.log(body);
+    res.send(body);
+  });
+})
+
+
+//Api call to hiscores data
 var Converter = require('csvtojson').Converter;
 var converter = new Converter({constructResult: false});
 

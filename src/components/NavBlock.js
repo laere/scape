@@ -5,8 +5,8 @@ const NavBlock = (props) => {
   return (
     <Link to={props.path}>
       <div className="navBlock">
-        <div className="navBlock__image">
-          <img src={props.img} alt="Runescape image"/>
+        <div>
+          <img className="navBlock__image" src={props.img} alt="Runescape image"/>
         </div>
         <div className="navBlock__text">
           <div className="navBlock__text--textTitle">{props.textTitle}</div>
