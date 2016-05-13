@@ -56,7 +56,7 @@ const mapStateToProps = (state) => {
   return {
     text: state.grandExchange.input,
     geData: state.grandExchange.items.data,
-    graphData: state.grandExchange.items.graphData
+    graphData: state.grandExchange.graph.data
   }
 }
 

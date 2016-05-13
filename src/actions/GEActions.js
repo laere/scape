@@ -39,11 +39,11 @@ export const fetchGrandExchangeData = (text) => {
   }
 }
 
-export const fetchGrandExchangeGraphData = (text) => {
+export const fetchGrandExchangeGraphData = (id) => {
   return (dispatch) => {
     dispatch(request(GE_GRAPH_REQUEST));
-    console.log(text);
-    return axios.get('/grandexchange/' + text)
+    console.log(id);
+    return axios.get('/grandexchange/item/' + id)
       .then(res => dispatch(receive(GE_GRAPH_SUCCESS, res.data)))
       .catch(res => dispatch(receive(GE_GRAPH_FAILURE)))
   }

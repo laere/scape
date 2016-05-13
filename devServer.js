@@ -44,8 +44,8 @@ app.get('/grandexchange/:text', (req, res) => {
   });
 })
 
-app.get('/grandexchange/:text', (req, res) => {
-  request(`http://services.runescape.com/m=itemdb_rs/api/graph/${req.params.text}.json`, (err, response, body) => {
+app.get('/grandexchange/item/:id', (req, res) => {
+  request(`http://services.runescape.com/m=itemdb_rs/api/graph/${req.params.id}.json`, (err, response, body) => {
     console.log(body);
     res.send(body);
   });
