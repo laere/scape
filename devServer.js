@@ -51,13 +51,16 @@ app.get('/grandexchange/item/:id', (req, res) => {
   });
 })
 
-
 //Api call to hiscores data
 var Converter = require('csvtojson').Converter;
-var converter = new Converter({constructResult: false});
+var converter = new Converter({});
+
+converter.on('record_parsed', (jsonObj) => {
+  console.log(jsonObj);
+})
 
 app.get('/hiscores/:text', (req, res) => {
-
+  request.get(hiscoresApi + req.params.text).pipe(converter).pipe(res);
 })
 
 app.get('*', function(req, res) {

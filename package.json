@@ -44,7 +44,8 @@
   },
   "dependencies": {
     "axios": "^0.11.0",
-    "csv-parser": "^1.9.3",
+    "csvtojson": "^0.5.11",
+    "d3": "^3.5.17",
     "fs": "0.0.2",
     "lodash": "^4.11.1",
     "react": "^0.14.7",
